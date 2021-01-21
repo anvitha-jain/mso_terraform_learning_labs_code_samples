@@ -4,6 +4,6 @@ variable "user" {
   default     = {
     username = "admin"
     password = "C1sco!234567"
-    url      = "https://10.10.20.60/mso/"
+    url      = "https://10.10.20.60"
   }
 }

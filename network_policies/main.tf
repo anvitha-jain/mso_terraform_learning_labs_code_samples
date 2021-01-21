@@ -18,17 +18,16 @@ provider "mso" {
 }
 
 # Define an MSO Tenant Resource.
-resource "mso_tenant" "tenant_obj" {
+data "mso_tenant" "tenant_obj" {
     name         = var.tenant
     display_name = var.tenant
-    description  = "This tenant is created by terraform"
 }
 
 # Define an MSO Schema Resource.
 resource "mso_schema" "schema_obj" {
     template_name = "Template1"
     name          = var.schema
-    tenant_id     = mso_tenant.tenant_obj.id
+    tenant_id     = data.mso_tenant.tenant_obj.id
 }
 
 # Define an MSO Schema VRF Resource.

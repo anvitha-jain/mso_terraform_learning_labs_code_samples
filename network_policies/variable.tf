@@ -4,13 +4,13 @@ variable "user" {
   default     = {
     username = "admin"
     password = "C1sco!234567"
-    url      = "https://10.10.20.60/mso/"
+    url      = "https://10.10.20.60"
   }
 }
 variable "tenant" {
     type        = string
-    default     = "js_10019"
-    // description = "The MSO tenant to use for this configuration"
+    default     = "js_10018"
+    description = "The MSO tenant to use for this configuration"
 }
 
 variable "schema" {
